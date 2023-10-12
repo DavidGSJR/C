@@ -4,21 +4,24 @@
 int main(){
 	setlocale(LC_ALL, "Portuguese");
 	
-	int numero, soma=0, produto=0;
-	
-		printf("Digite um n˙mero positivo ou negativo e zero para terminar: ");
-		scanf("%i", &numero);
+	int numero, soma=0, produto=1;
 		
-		while(numero>0){
+		while(1){
+		    printf("Digite um n√∫mero positivo ou negativo e zero para terminar: ");
+		    scanf("%i", &numero);
+		    
+		    if(numero<=0){
+		        break;
+		    }
 			if(numero%2==0){
 				soma+=numero;
 			} else {
-				produto=produto*numero;
+				produto*=numero;
 			}
 		}
 		
-		printf("A soma dos numeros pares È %i", soma);
-		printf("o produto dos numeros Ìmpares È %i", produto);
+		printf("\nA soma dos numeros pares √© %i", soma);		
+		printf("\nO produto dos numeros √≠mpares √© %i", produto);
 	
 	return 0;
 }
