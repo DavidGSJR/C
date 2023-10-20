@@ -10,7 +10,7 @@ int main(){
 
        do{
 
-           printf("%c\n",nome[i]+1);
+           printf("%c\n",nome[i]);
 
            i++;
 
