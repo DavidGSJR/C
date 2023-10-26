@@ -8,19 +8,21 @@ int main(){
 	int numero[8], cont, total;
 	
 	for(cont=0;cont<8;cont++){
-		printf("Digite o %dº número: ", cont+1);
+		printf("Digite o %dÂº nÃºmero: ", cont+1);
 		scanf("%d", &numero[cont]);
+		
+		if(numero[cont]%6==0){
+			total++;
+		}
 	}
 	
-	printf("Posição \t Número Digitado\n");
+	printf("PosiÃ§Ã£o \t NÃºmero Digitado\n");
 	
 	for(cont=0;cont<8;cont++){
 		printf("%d \t %d \n", cont+1, numero[cont]);
-		
 	}
-	if(numero[cont]%6==0){
-			total+=numero[cont];
-			printf("A soma dos multiplos de 6 é %d", total);
-		}
+	
+	printf("Total de nÃºmeros mÃºltiplos de seis: %d\n", total);
+	
 	return 0;
 }
