@@ -1,33 +1,29 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<locale.h>
-#include<math.h>
 
-float numero, i, fat;
-
-float converterfat();
+int calculaFatorial(int numero);
 
 
 int main(){
    	setlocale(LC_ALL, "Portuguese");
 
- 	float numRad;
- 
+ 	int numero;
  	
- 	printf("Informe um número para calcular o seu fatorial: ");
- 	scanf("%f", &numero);
+ 	printf("Informe um número para calcular o fatorial: ");
+ 	scanf("%d", &numero);
  	
- 	numRad = converterFat();
+ 	int resultado = calculaFatorial(numero);
  	
- 	printf("O fatorial d", numero, numRad);
+ 	printf("O fatorial de %d é %d", numero, resultado);
 
 	return 0;
 }
 
-float converterfat(){
-	float rad = for(i=0;i<=numero;i++){
-		fat = i*numero;
-	};
-	return rad;
+int calculaFatorial(int numero){
+	if(numero==0){
+		return 1;
+	} else {
+		return numero * calculaFatorial(numero-1);
+	}
 }
-
